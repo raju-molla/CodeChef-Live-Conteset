@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define Fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define ForN(i,a,b) for(int i=a; i<b; i++)
+#define ForE(i,a,b) for(int i=a; i<=b; i++)
+
+int main()
+{
+
+    Fast
+
+    ll d1,v1,d2,v2,p;
+    cin>>d1>>v1>>d2>>v2>>p;
+    ll P=ceil(v1/d1)+ceil(v2/d2);
+    int i;
+    ll sum=0;
+    for( i=1; i<100000; i++){
+        if(d1<=i){
+            sum+=v1;
+        }
+        if(d2<=i){
+            sum+=v2;
+        }
+        if(sum>=p)break;
+    }
+    cout<<i<<endl;
+
+}
