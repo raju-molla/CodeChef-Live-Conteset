@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define Fast ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+#define Sort(v) sort(v.begin(),v.end())
+int main(){
+    Fast
+    int t;
+    cin>>t;
+    while(t--){
+        int x,y,z;
+        cin>>x>>y>>z;
+        vector<int>v={x,y,z};
+        Sort(v);
+        if(v[0]+v[1]==v[2])cout<< "YES"<<endl;
+        else cout<< "NO"<<endl;
+    }
+}
