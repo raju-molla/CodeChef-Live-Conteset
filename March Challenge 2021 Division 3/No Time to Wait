@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define Sort(v)         sort(v.begin(),v.end())
+#define reSort(v)       sort(v.rbegin(),v.rend())
+#define ArrSort(a,n)    sort(a,a+n)
+#define Arrrev(a,n)     reverse(a,a+n)
+#define pb(v)           push_back(v)
+#define For(strt,n)     for(int i=strt; i<n; i++)
+
+
+int main()
+{
+
+   int n,h,x;
+   cin>>n>>h>>x;
+   int arr[n];
+   For(0,n)cin>>arr[i];
+   int flag=0;
+   for(int i=0; i<n; i++){
+    int res=arr[i]+x;
+    if(res==h){
+        flag=1;
+        break;
+    }
+   }
+    if(flag==1)cout<< "YES"<<endl;
+    else cout<< "NO"<<endl;
+
+
+
+
+
+}
