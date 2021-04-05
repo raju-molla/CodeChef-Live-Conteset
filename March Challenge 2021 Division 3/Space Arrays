@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define Sort(v)         sort(v.begin(),v.end())
+#define reSort(v)       sort(v.rbegin(),v.rend())
+#define ArrSort(a,n)    sort(a,a+n)
+#define Arrrev(a,n)     reverse(a,a+n)
+#define pb(v)           push_back(v)
+#define For(strt,n)     for(int i=strt; i<n; i++)
+void solve(){
+
+   int n;
+   cin>>n;
+   vector<int>v(n);
+   set<int>s;
+   for(int i=0; i<n; i++){
+    cin>>v[i];
+
+   }
+   Sort(v);
+   int ans=0;
+   for(int i=0; i<n; i++){
+    if(v[i]>i+1){
+        cout<< "Second"<<endl;
+        return ;
+    }
+   }
+   for(int i=0; i<v.size(); i++){
+        ans+=abs(v[i]-(i+1));
+   }
+   if(ans%2)cout<< "First"<<endl;
+   else cout<< "Second"<<endl;
+
+
+
+}
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        solve();
+
+    }
+}
