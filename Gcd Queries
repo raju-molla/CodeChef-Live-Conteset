@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int n,Q;
+	    cin>>n>>Q;
+	    int arr[n+10];
+	    for(int i=1; i<=n; i++){
+	        cin>>arr[i];
+	    }
+	    int v1[n+10],v2[n+10];
+
+	    v1[0]=v2[n+1] = 0;
+
+	    for(int i=1; i<=n; i++){
+	        int gcd=__gcd(v1[i-1],arr[i]);
+	        v1[i]=(gcd);
+	    }
+	    for(int i=n; i>=1; i--){
+	        int gcd=__gcd(v2[i+1],arr[i]);
+	        v2[i]=(gcd);
+	    }
+
+	    while(Q--){
+	        int L,R;
+	        cin>>L>>R;
+	        cout<<__gcd(v1[L-1],v2[R+1])<<endl;
+
+	    }
+	}
+	return 0;
+}
